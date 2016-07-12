@@ -19,3 +19,4 @@ C:\Users\Mitchell Osborne\Documents\Project-Transkomayto\Project Transkomayto\Te
 C:\Users\Mitchell Osborne\Documents\Project-Transkomayto\Project Transkomayto\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Mitchell Osborne\Documents\Project-Transkomayto\Project Transkomayto\obj\Debug\Assembly-CSharp.dll
 C:\Users\Mitchell Osborne\Documents\Project-Transkomayto\Project Transkomayto\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Mitchell Osborne\Documents\Project-Transkomayto\Project Transkomayto\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
