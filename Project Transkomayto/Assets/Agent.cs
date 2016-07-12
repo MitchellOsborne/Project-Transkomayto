@@ -11,7 +11,7 @@ public class Agent : MonoBehaviour {
 	public bool canJump;
 	int remainingJumps;
 
-	BoxCollider ledgeCollider;
+	public BoxCollider ledgeCollider;
 
 	public bool isGrappled = false;
 	public bool isGrounded = false;
@@ -20,7 +20,7 @@ public class Agent : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
 		remainingJumps = JumpCount;
-		ledgeCollider = GetComponents<BoxCollider> () [1];
+
 	}
 	
 	// Update is called once per frame
@@ -85,7 +85,7 @@ public class Agent : MonoBehaviour {
 		}
 	}
 
-	void GrabLedge(Transform ledge)
+	public void GrabLedge(Transform ledge)
 	{
 		rb.MovePosition (ledge.position - ledgeCollider.center);
 		isGrappled = true;
@@ -93,15 +93,6 @@ public class Agent : MonoBehaviour {
 		remainingJumps = JumpCount;
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Ledge") {
-			if (other.transform.position.x > transform.position.x && Input.GetAxis ("Horizontal") > 0.5) {
-				GrabLedge (other.transform);
-			} else if (other.transform.position.x < transform.position.x && Input.GetAxis ("Horizontal") > -0.5) {
-				GrabLedge (other.transform);
-			}
-		}
-	}
+
 
 }
