@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Agent.cs" />
+     <Compile Include="Assets\CameraLerp.cs" />
      <Compile Include="Assets\EditorCubeScript.cs" />
      <Compile Include="Assets\ExportBtnScript.cs" />
      <Compile Include="Assets\LedgeGrabScript.cs" />
+     <Compile Include="Assets\MoveCamera.cs" />
      <Compile Include="Assets\RoomData.cs" />
      <Compile Include="Assets\Scripts\RoomGenerator.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

@@ -17,11 +17,13 @@ public class LedgeGrabScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Ledge") {
-			if (other.transform.position.x > transform.position.x && Input.GetAxis ("Horizontal") > 0.5) {
-				owner.GrabLedge (other.transform);
-			} else if (other.transform.position.x < transform.position.x && Input.GetAxis ("Horizontal") > -0.5) {
-				owner.GrabLedge (other.transform);
+		if (!owner.GetComponent<CharacterController> ().isGrounded) {
+			if (other.tag == "Ledge") {
+				if (other.transform.position.x >= transform.position.x && Input.GetAxis ("Horizontal") > 0.5) {
+					owner.GrabLedge (other.transform, false);
+				} else if (other.transform.position.x <= transform.position.x && Input.GetAxis ("Horizontal") < -0.5) {
+					owner.GrabLedge (other.transform, true);
+				}
 			}
 		}
 	}
